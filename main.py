@@ -10,9 +10,10 @@ def solarSystemSimulation():
     planets = ['Sun', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 
     solar_system_ephemeris.set('builtin')
-
+    #you can select the time range here
     time_start = Time('2023-11-23 00:00:00')
     time_end = Time('2024-11-23 00:00:01')
+    
     time_step = 1 * u.day
     times = Time(np.arange(time_start.jd, time_end.jd, time_step.to(u.day).value), format='jd')
     positions = {}
